@@ -22,11 +22,11 @@ BabyDataSet = list(zip(names,births))
 print(BabyDataSet)
 
 # create a DataFrame object
-df = pd.DataFrame(data = BabyDataSet, columns=['Names', 'Births'])
-print(df)
+df2 = pd.DataFrame(data = BabyDataSet, columns=['Names', 'Births'])
+print(df2)
 
 # exxport the dataframe to a .csv file
-df.to_csv('baby_births.csv')
+df2.to_csv('baby_births.csv')
 
 # Just separate two tables =)
 print('\n\n***Get data***\n\n')
@@ -36,6 +36,9 @@ Locattion = r'./baby_births.csv'
 df = pd.read_csv(Locattion)
 
 print(df)
+
+# assert for pytest (sorry for that, just test testing system)
+assert 1==1
 
 # delete temp .csv file
 import os

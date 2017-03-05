@@ -84,5 +84,9 @@ WORKDIR /code
 # Install the Python dependencies.
 RUN pip install -r requirements.txt
 
+# Run tests
+# pandas
+RUN python tests/test_pandas.py
+
 # set the default command for the container is python3
 CMD ["python3"]

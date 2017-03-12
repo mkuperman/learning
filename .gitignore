@@ -1,3 +1,5 @@
 venv/
 __pycache__
 .cache/
+venv3.4/
+*.png

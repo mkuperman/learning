@@ -9,11 +9,14 @@ home = [[0.123123, 5.12312], [0.123123, 5.12312], [0.123123, 5.12312],
         [0.123123, 5.12312], [0.123123, 5.12312]]
 work = [[6.123123, 6.12312], [6.123123, 6.12312], [6.123123, 6.12312],
         [6.123123, 6.12312], [6.123123, 6.12312]]
+k = [12, 2, 4, 9, 14]
 
-DriverDataSet = list(zip(names,age,work_start,work_end,experience,home,work))
+# k - тот самый коэффициент, который мы ищем
+
+DriverDataSet = list(zip(names,age,work_start,work_end,experience,home,work,k))
 
 df = pd.DataFrame(data = DriverDataSet, columns = ['Names', 'Age', 'Work Start',
                                                    'Work End', 'Experience',
-                                                   'Home', 'Work'])
+                                                   'Home', 'Work', 'Koe'])
 
 df.to_csv('Data/drivers.csv')

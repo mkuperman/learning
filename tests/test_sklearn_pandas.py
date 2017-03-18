@@ -35,6 +35,8 @@ data.Age = label.transform(data.Age)
 # чтобы разбивать всех на группы
 print(data)
 
+data = data.drop(['Names'], axis=1)
+
 ## Построение моделей классификации и их анализ
 from sklearn import cross_validation, svm
 from sklearn.neighbors import KNeighborsClassifier
@@ -69,8 +71,8 @@ ROCtrainTRN, ROCtestTRN, ROCtrainTRG, ROCtestTRG = cross_validation.train_test_s
 
 
 model_rfc = RandomForestClassifier(n_estimators = 70) # колво деревьев в параметре
-model_knc = KNeighborsClassifier(n_neighbors = 18) # в параметре передаем колво соседей
-model_lr = LogisticRegression(penalty='11', tol=0.01)
+model_knc = KNeighborsClassifier(n_neighbors = 15) # в параметре передаем колво соседей
+model_lr = LogisticRegression(tol=0.01)
 model_svc = svm.SVC() # по умолчанию kernek = 'rbf'
 
 # Проверка моделей с помощью скользящего контроля
@@ -85,5 +87,3 @@ itog_val['SVC'] = scores.mean()
 
 DataFrame.from_dict(data = itog_val, orient='index').plot(kind='bar', legend=False)
 plt.savefig('cross_val_res.png')
-
-# Error here. http://scikit-learn.org/stable/modules/cross_validation.html <- Read it

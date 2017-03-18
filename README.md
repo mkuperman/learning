@@ -16,4 +16,3 @@ python 3.4 <br />
 pip 9.0.1
 
 ## links
-https://habrahabr.ru/post/202090/ <br />

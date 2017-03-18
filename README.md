@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/roi-itlab/learning.svg?branch=master)](https://travis-ci.org/roi-itlab/learning)
+
 # learning
 Python part which will process the data (Machine Learning?) <br />
 В связи с поломкой одной из библиотек Python3.6 перешли на Python3.4

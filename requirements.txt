@@ -3,3 +3,5 @@ scikit-learn
 statsmodels
 matplotlib
 pytest
+theano
+keras

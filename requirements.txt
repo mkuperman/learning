@@ -4,4 +4,6 @@ statsmodels
 matplotlib
 pytest
 theano
+tensorflow
 keras
+lasagne
